@@ -2,10 +2,13 @@ package N_Queen;
 
 public class PuzzleSolver {
 	public static void main(String[] args){
-		Solver solver = new Solver(50);
-		
-		solver.curS.info();
-		State goal = solver.FindGoal();
+		int N = 50;
+		State goal = null;
+		while(goal == null){
+			Solver solver = new Solver(N);
+			solver.curS.info();
+			goal = solver.FindGoal();
+		}
 		goal.info();
 	}
 }
